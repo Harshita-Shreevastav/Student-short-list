@@ -210,7 +210,7 @@ if (isUpdate===false){
 
                 <div style='margin-top:20px'>
                   <input style="width: 20px;"
-                  type="checkbox" id="Shortlisted" >
+                  type="checkbox" class="shortlist" data-shortlisted-id='${record.studentId}'>
                 </div>
                 <div style="font-size: 13px;  ">
                   Shortlist
@@ -321,6 +321,68 @@ deleteButton.forEach((button) => {
     
   })
 })
+
+const shortlistedStudent=JSON.parse(localStorage.getItem('shortlistedStudent'))||[];
+
+const shortlistCheckBox=document.querySelectorAll('.shortlist')
+console.log(shortlistCheckBox)
+shortlistCheckBox.forEach((checkBox) =>{
+  console.log("Adding event listner to the checklist box")
+  checkBox.addEventListener(('change'), () => {
+
+    if(checkBox.checked) {
+
+      console.log('Box checked');
+      console.log(checkBox.dataset.shortlistedId);
+      studentList.forEach((record) => {
+        if (record.studentId===checkBox.dataset.shortlistedId){
+          console.log(record);
+          let matchiingRecord=''
+          shortlistedStudent.forEach((shortlistedRecord) => {
+            if(shortlistedRecord.studentId===record.studentId)
+              matchiingRecord=shortlistedRecord;
+          })
+          if(!matchiingRecord){
+            shortlistedStudent.push(record);
+          console.log(shortlistedStudent);
+          }
+          
+          else{
+            console.log("Already in The shortlisted List")
+          }
+        }
+      })
+    }
+    else{
+      console.log('Box unchecked')
+      studentList.forEach((record,index) => {
+        if (record.studentId===checkBox.dataset.shortlistedId){
+          console.log(record)
+          shortlistedStudent.splice(index,1)
+          console.log(shortlistedStudent)
+          
+        }
+      })
+    }
+    
+    
+   
+  })
+})
+
+const shortlistButton=document.getElementById('add-to-shortlist')
+console.log(shortlistButton)
+shortlistButton.addEventListener('click', () => {
+
+  console.log('Add to Shortlist cliecked!')
+  localStorage.setItem('shortlistedStudent', JSON.stringify(shortlistedStudent))
+  console.log(JSON.stringify(localStorage.getItem('shortlistedStudent')))
+
+
+})
+
+
+
 
   
   

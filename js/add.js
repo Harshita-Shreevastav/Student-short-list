@@ -79,6 +79,11 @@ submitButton.addEventListener('click', ()=> {
   
   storingInfo(record)
 
+  setTimeout(() => {
+    location.reload()
+  }, 1000)
+  
+
   function preFillForm(record){
     document.getElementById('student-name').value='';
     document.getElementById('student-department').value='';

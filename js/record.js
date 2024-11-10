@@ -7,3 +7,11 @@ export function getStudentList(student) {
   return student;
 }
 
+export const shortlistedStudent=  JSON.parse(localStorage.getItem('shortlistedStudent'))||[]
+
+export function getshortlistedStudentList(shortlistedStudent) {
+  console.log("Returning student");
+  return shortlistedStudent;
+}
+
+

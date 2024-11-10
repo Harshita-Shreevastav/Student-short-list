@@ -136,13 +136,13 @@ addUpdateButton.addEventListener('click', () => {
   record.studentGender=document.getElementById('student-gender').value;
   record.studentCourse=document.getElementById('student-course').value;
   console.log(record);
-  existingList.push(record);
-  console.log(JSON.stringify(localStorage.getItem('studentRecord')));
+  // existingList.push(record);
+  // console.log(JSON.stringify(localStorage.getItem('studentRecord')));
 
 
   existingList.forEach( (sd,index) => {
     if (sd.studentId===record.studentId){
-      existingList.splice(index,1);
+      existingList.splice(index,1,record);
       return
     }
   });

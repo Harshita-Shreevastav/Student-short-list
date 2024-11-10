@@ -26,13 +26,13 @@
           
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link " href="add.html">Add</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="shortlist.html">Shortlisted</a>
+              <a class="nav-link" href="#">Shortlisted</a>
               
             </li>
           </ul>
@@ -48,20 +48,18 @@
 
       
 
-      <div style="display: flex;">
-        <p style="font-size: 25px; font-weight:600; text-align: center;margin:0 0 40px 20px">Students List</p>
+      <div style="display: flex; ">
+        <p style="font-size: 25px; font-weight:600; text-align: center;margin:0 0 40px 10px"> Shortlisted Students</p>
 
         <div style="display: flex; margin-left: auto;">
-          <a href='shortlist.html' class="btn btn-light shadow  bg-body-tertiary rounded submit" style=" display: inline; font-size: 18px; margin:5px 80px 40px 10px ;border:1px solid black; padding:3px 20px;" id="add-to-shortlist" >Add To Shortlist</a>
+          <button type="button" class="btn btn-light shadow  bg-body-tertiary rounded submit" style=" font-size: 18px;margin:0px 100px 40px 0;padding:0px 20px ; border:1px solid black " id="clear-button"  >Clear</button>
         </div>
 
         
 
       </div>
 
-
-
-      <div class="d-flex flex-column mb-3 all-student-details" style="padding:10px; display: flex; margin-right:auto; width:90%; "></div>
+      <div class="d-flex flex-column mb-3 all-shortlisted-students" style="padding:10px; display: flex; margin-right:auto; width:90%; "></div>
       
        
       
@@ -75,8 +73,7 @@
 
 
 
-
-    <script type="module" src="../js/home.js"></script>
+    <script type="module" src="../js/shortlist.js"></script>
     
     
     
