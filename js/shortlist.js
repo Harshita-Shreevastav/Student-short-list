@@ -140,7 +140,7 @@ if (isUpdate===false){
   else{
 
       console.log('No Shortlisted students yet')
-      document.querySelector('.all-student-details').innerHTML=
+      document.querySelector('.all-shortlisted-students').innerHTML=
       `<div>
         <p style='font-size:18px;'> No records yet!</p>
       </div`
