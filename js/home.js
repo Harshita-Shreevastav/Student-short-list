@@ -167,7 +167,7 @@ if (isUpdate===false){
               </div>
 
               <div id='display-name' style='display:flex; font-size:14px ; color:gray''>
-                  Pursueing ${record.studentCourse}
+                  Pursuing ${record.studentCourse}
               </div>
 
               <div id='display-name' style='display:flex ; font-size:14px ; color:gray''>
