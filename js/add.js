@@ -9,7 +9,13 @@ const existingList=getStudentList(student)||[];
 
 
 
+
+
 function storingInfo(record){
+
+  document.querySelector('.flashed-message').innerHTML=`<div class="alert alert-success" role="alert" style='display: flex; align-items: center;height:10px; width:100%; padding-left:80px'>
+          Student Details Added! Go to Homepage to see the change!
+          </div>`
 
   const existingList=getStudentList(student)||[];
 
@@ -72,6 +78,17 @@ submitButton.addEventListener('click', ()=> {
   console.log("Butotn clicked")
   
   storingInfo(record)
+
+  function preFillForm(record){
+    document.getElementById('student-name').value='';
+    document.getElementById('student-department').value='';
+    document.getElementById('student-course').value='';
+    document.getElementById('student-gender').value='';
+    document.getElementById('joined-year').value='';
+    document.getElementById('student-age').value='';
+  }
+
+    preFillForm(record)
   
 
 

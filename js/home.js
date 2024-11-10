@@ -189,7 +189,7 @@ if (isUpdate===false){
               flex-grow:1;margin:40px 0px 0px -30px;">
 
               <div style="display: flex; margin-left: auto; width:75px;z-index=1">
-                <a href='update.html' class="btn btn-light shadow  bg-body-tertiary rounded update-link" style=" display: inline; font-size: 13px; margin:30px 0 25px 10px ;border:1px solid black" id="update-button" data-button-update='${record.studentId}'>Update</a>
+                <a href='update.html' class="btn btn-light shadow  bg-body-tertiary rounded submit update-link" style=" display: inline; font-size: 13px; margin:30px 0 25px 10px ;border:1px solid black" id="update-button" data-button-update='${record.studentId}'>Update</a>
               </div>
 
               <div style='display:flex; flex-grow:1'>
@@ -197,7 +197,7 @@ if (isUpdate===false){
 
 
               <div style="display: flex; margin-left: auto; z-index=1">
-                <button type="button" class="btn btn-light shadow  bg-body-tertiary rounded delete" style=" font-size: 13px;margin:30px 0 25px 0 ;width:75px; border:1px solid black " id="delete-button"  data-button-delete='${record.studentId}'>Delete</button>
+                <button type="button" class="btn btn-light shadow  bg-body-tertiary rounded submit delete" style=" font-size: 13px;margin:30px 0 25px 0 ;width:75px; border:1px solid black " id="delete-button"  data-button-delete='${record.studentId}'>Delete</button>
               </div>
 
               
