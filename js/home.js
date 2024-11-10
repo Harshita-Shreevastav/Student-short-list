@@ -130,16 +130,16 @@ const refreshButton=document.getElementById('refresh-button');
 refreshButton.addEventListener('click', ()=> {
   console.log("Button clicked")
 
+
+
   if (isUpdate===false){
 
-    const student=JSON.parse(localStorage.getItem('studentRecord'));
-    console.log(`student:${JSON.stringify(student)}`)
+    studentList=getStudentList(student);
 
     
     
-    if ( student && Array.isArray(student)) {
-        // If `students` is an array, push each student into `studentList`
-        studentList.push(...student);  // Spread the array into studentList
+    if ( studentList && studentList.length>0) {
+        
     
 
     
@@ -149,7 +149,7 @@ refreshButton.addEventListener('click', ()=> {
     
 
 
-      if(studentList.length>0){
+    
         studentList.forEach( (record) => {
           console.log('Running for each function')
           console.log(`record:${JSON.stringify(record)}`);
@@ -249,8 +249,8 @@ refreshButton.addEventListener('click', ()=> {
 
 
         })
-      }
     }
+    
        
       
     
@@ -298,7 +298,7 @@ refreshButton.addEventListener('click', ()=> {
       });
     });
 
-  const existingList=getStudentList(student)||[];
+
 
 
   const deleteButton=document.querySelectorAll('.delete');
@@ -310,15 +310,17 @@ refreshButton.addEventListener('click', ()=> {
       console.log(button.dataset.buttonDelete)
 
 
-      existingList.forEach((sd,index)=> {
+      studentList.forEach((sd,index)=> {
         if (sd.studentId===button.dataset.buttonDelete){
-          existingList.splice(index,1);
+          studentList.splice(index,1);
         }
       })
-      localStorage.setItem('studentRecord',JSON.stringify(existingList))
+      localStorage.setItem('studentRecord',JSON.stringify(studentList))
 
       console.log(JSON.stringify(localStorage.getItem('studentRecord')));
+      location.reload()
 
+      
     })
   })
 
