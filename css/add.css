@@ -1,0 +1,12 @@
+.submit{
+
+  margin: 10px 110px 0 0 
+}
+
+.submit:active {
+  margin: 14px 112px 0 0 ;
+
+  box-shadow: none !important;
+  opacity: none;
+  
+}
